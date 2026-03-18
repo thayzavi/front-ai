@@ -1,0 +1,49 @@
+/* [project]/src/app/styles/Siderbar.module.css [app-client] (css) */
+.Siderbar-module__asTwPW__sidebar {
+  color: #fff;
+  background: #00388b;
+  flex-direction: column;
+  width: 260px;
+  height: 100vh;
+  padding: 15px;
+  display: flex;
+}
+
+.Siderbar-module__asTwPW__item {
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  padding: 10px;
+}
+
+.Siderbar-module__asTwPW__logo {
+  text-align: center;
+  color: #f5f7fb;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.Siderbar-module__asTwPW__logo span {
+  color: #ffb85c;
+  font-weight: 700;
+}
+
+.Siderbar-module__asTwPW__item:hover {
+  background: #014aaab7;
+}
+
+.Siderbar-module__asTwPW__logout {
+  color: #fff;
+  cursor: pointer;
+  background: #ff4d4f;
+  border: none;
+  border-radius: 6px;
+  margin-top: auto;
+  padding: 10px;
+}
+
+.Siderbar-module__asTwPW__logout:hover {
+  background: #d9363e;
+}
+
+/*# sourceMappingURL=src_app_styles_Siderbar_module_css_bad6b30c._.single.css.map*/

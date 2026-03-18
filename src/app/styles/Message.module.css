@@ -8,6 +8,7 @@
 
 .input {
   flex: 1;
+  background-color: #d1d5db;
   padding: 10px 12px;
   border-radius: 8px;
   border: 1px solid #d1d5db;

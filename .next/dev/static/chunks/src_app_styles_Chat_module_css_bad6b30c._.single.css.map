@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/styles/Chat.module.css"],"sourcesContent":[".container {\r\n  display: flex;\r\n  height: 100vh;\r\n}\r\n\r\n.chatWindow {\r\n  flex: 1;\r\n  display: flex;\r\n  flex-direction: column;\r\n  background: #f7f7f8;\r\n}\r\n\r\n.messages {\r\n  flex: 1;\r\n  padding: 20px;\r\n  overflow-y: auto;\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 12px;\r\n}\r\n\r\n.user {\r\n  align-self: flex-end;\r\n  max-width: 70%;\r\n  background: #2563eb;\r\n  color: white;\r\n  padding: 10px 14px;\r\n  border-radius: 14px 14px 4px 14px;\r\n  font-size: 14px;\r\n  line-height: 1.4;\r\n}\r\n\r\n.bot {\r\n  align-self: flex-start;\r\n  max-width: 70%;\r\n  background: #e5e7eb;\r\n  color: #111;\r\n  padding: 10px 14px;\r\n  border-radius: 14px 14px 14px 4px;\r\n  font-size: 14px;\r\n  line-height: 1.4;\r\n}\r\n\r\n.messages::-webkit-scrollbar {\r\n  width: 6px;\r\n}\r\n\r\n.messages::-webkit-scrollbar-thumb {\r\n  background: #ccc;\r\n  border-radius: 6px;\r\n}\r\n.initialMessage {\r\n    text-align: center;\r\n    color: #888;\r\n    margin-top: 50px;\r\n    font-size: 16px;\r\n}\r\n"],"names":[],"mappings":"AAAA;;;;;AAKA;;;;;;;AAOA;;;;;;;;;AASA;;;;;;;;;;;AAWA;;;;;;;;;;;AAWA;;;;AAIA;;;;;AAIA"}}]
+}

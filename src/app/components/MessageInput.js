@@ -7,21 +7,29 @@ export default function MessageInput({ conversationId, setMessages }) {
   const [message, setMessage] = useState("");
 
   async function send() {
-  if (!message.trim()) return;
+    if (!message.trim()) return;
 
-  const res = await api.post("/api/chat/message", {
-    message,
-    conversationId
-  });
+    const userMessage = { content: message, sender: "USER" };
 
-  setMessages(prev => [
-    ...prev,
-    { content: message, sender: "USER" },
-    { content: res.data.message, sender: "BOT" }
-  ]);
 
-  setMessage("");
-}
+    setMessages(prev => [...prev, userMessage]);
+
+    setMessage("");
+
+    try {
+      const res = await api.post("/api/chat/message", {
+        message,
+        conversationId
+      });
+
+      const botMessage = { content: res.data.message, sender: "BOT" };
+
+      setMessages(prev => [...prev, botMessage]);
+
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   return (
     <div className={styles.container}>

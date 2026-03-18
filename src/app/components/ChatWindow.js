@@ -8,39 +8,45 @@ export default function ChatWindow({ conversationId }) {
     const [messages, setMessages] = useState([]);
 
     useEffect(() => {
-  if (!conversationId) return;
+        if (!conversationId) return;
 
-  async function load() {
-    try {
-      const res = await api.get(`/api/chat/conversations/${conversationId}/messages`);
-      setMessages(res.data);
-    } catch (error) {
-      console.error("Erro ao carregar mensagens:", error);
-    }
-  }
+        async function load() {
+            try {
+                const res = await api.get(`/api/chat/conversations/${conversationId}/messages`);
+                setMessages(res.data);
+            } catch (error) {
+                console.error("Erro ao carregar mensagens:", error);
+            }
+        }
 
-  load();
-}, [conversationId]);
+        load();
+    }, [conversationId]);
 
     return (
         <div className={styles.chatWindow}>
             <div className={styles.messages}>
-                {messages.map((msg, index) => (
-                    <div
-                        key={index}
-                        className={
-                            msg.sender === "USER"
-                            ? styles.user
-                            : styles.bot
-                        }
-                    >
-                        {msg.content}
+                {messages.length === 0 ? (
+                    <div className={styles.initialMessage}>
+                        Olá! 👋 Como posso te ajudar hoje?
                     </div>
-                ))}
+                ) : (
+                    messages.map((msg, index) => (
+                        <div
+                            key={index}
+                            className={
+                                msg.sender === "USER"
+                                    ? styles.user
+                                    : styles.bot
+                            }
+                        >
+                            {msg.content}
+                        </div>
+                    ))
+                )}
             </div>
 
             <MessageInput conversationId={conversationId} setMessages={setMessages} />
         </div>
-    )  
+    )
 
 }
