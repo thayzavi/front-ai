@@ -23,10 +23,22 @@
 }
 .logo span{
   color:#ffb85c;
-  font-weight:700;}
+  font-weight:700;
+}
 
 .item:hover{
   background:#014aaab7;
+}
+.btnNewChat{
+  padding: 10px;
+  background-color: #c3dbff;
+  cursor: pointer;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 50px;
+}
+.btnNewChat:hover{
+  background-color: #e1ebfa;
 }
 .logout {
   margin-top: auto;

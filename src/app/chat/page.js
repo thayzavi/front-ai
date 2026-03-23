@@ -6,16 +6,22 @@ import ChatWindow from "../components/ChatWindow";
 import styles from "../styles/Chat.module.css";
 
 export default function ChatPage() {
-
   const [conversationId, setConversationId] = useState(null);
+  const [refreshTrigger, setRefreshTrigger] = useState(0);
+
 
   return (
+
     <div className={styles.container}>
-      
-      <ChatSiderbar setConversationId={setConversationId} />
 
-      <ChatWindow conversationId={conversationId} />
+      <ChatSiderbar 
+      setConversationId={setConversationId}
+      refreshTrigger={refreshTrigger} />
 
-    </div>
-  );
+      <ChatWindow 
+      conversationId={conversationId} 
+      setConversationId={setConversationId}
+      setRefreshTrigger={setRefreshTrigger}
+      />
+    </div>);
 }

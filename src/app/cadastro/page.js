@@ -17,7 +17,7 @@ export default function Register() {
         try {
             const res = await api.post("/api/auth/register", { email, password });
             alert("Registro bem-sucedido! Faça login para continuar.");
-            router.push("/chat");
+            router.push("/login");
         } catch {
             alert("Falha no registro. Tente novamente.");
         }
