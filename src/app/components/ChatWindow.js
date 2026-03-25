@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import api from "../services/api";
 import MessageInput from "./MessageInput";
+import ChatMessage from "./ChatMessage";
 import styles from "../styles/Chat.module.css";
 
 export default function ChatWindow({ conversationId, setConversationId, setRefreshTrigger }) {
@@ -37,7 +38,7 @@ export default function ChatWindow({ conversationId, setConversationId, setRefre
                 msg.sender === "USER" ? styles.user : styles.bot
               }
             >
-              {msg.content}
+              <ChatMessage content={msg.content} />
             </div>
           ))
         )}
