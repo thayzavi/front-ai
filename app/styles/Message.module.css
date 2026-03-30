@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid #e5e7eb;
+  background: white;
+  gap: 10px;
+}
+
+.input {
+  flex: 1;
+  color: black;
+  background-color: #d1d5db;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 14px;
+}
+
+.input:focus {
+  border-color: #2563eb;
+}
+
+.button {
+  padding: 10px 16px;
+  background: #2563eb;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background: #1d4ed8;
+}
